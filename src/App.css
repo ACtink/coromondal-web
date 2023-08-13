@@ -9,7 +9,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 5s linear;
   }
 }
 
@@ -35,4 +35,225 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.home {
+  height: 50vh;
+  min-width: 100vw;
+  /* background-size: cover; */
+  /* background-image: url(../public/home-banner.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover; */
+  
+ 
+}
+
+.card-container {
+  width: 100%;
+  height: calc(100%-30vh);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-around;
+  background: #780206; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #061161,
+    #780206
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #061161,
+    #780206
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* 
+.card{
+  height:450px;
+  width: 240px;
+  background-color: #b3c5e7;
+  border:3px solid orange;
+  margin-top: 30px;
+  border-radius: 10%;
+
+} */
+
+.card {
+  width: 300px;
+  height: 400px;
+  background-color: #f0f0f0;
+  border: 15px solid transparent; /* Initial transparent border */
+  border-radius: 10px;
+  position: relative;
+ 
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: 50px;
+  box-shadow: 10px 10px 20px rgba(35, 34, 23, 0.3);
+ 
+  animation: glow 1s infinite alternate, floatingAnimation 1s infinite alternate ease-in-out;
+  border: 2px solid #00aaff; /* Glow color */
+}
+/* .card::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border: 5px solid #e4c01d;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform .8s, opacity 0.3s;
+} */
+
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0px 10px 20px rgba(234, 38, 38, 0.3);
+  animation: glow 4s infinite alternate;
+  border: 2px solid #fbff00; /* Glow color */
+}
+.card:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
+@keyframes glow {
+  from {
+    box-shadow: 0 0 15px #ffff00; /* Initial shadow size and color */
+  }
+  to {
+    box-shadow: 0 0 25px #ffd900; /* Glow shadow size and color */
+  }
+}
+
+.inner-container {
+  height: 500px;
+  width: 1000px;
+  display: flex;
+  justify-content: space-around;
+}
+
+@keyframes floatingAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+
+.card-image-container{
+  height: 100%;
+  width: 100%;
+  
+}
+
+.banner-image{
+  height: 50vh;
+  width: 100%;
+
+  
+  
+
+}
+
+.card-image{
+  height: 100%;
+  width: 100%;
+  border-radius: 4% 4% 0 0;
+
+}
+
+/* button{
+  height: 60px;
+  width: 150px;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+   border-radius: 23px;
+   margin-top: 45px;
+} */
+
+.button-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+ height: 60px;
+ width: 120px;
+  padding: 15px 50px;
+  background-image: linear-gradient(-225deg, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 40px;
+  top: 60%;
+  
+  /* transform: translate(-50%, -150%); */
+  
+}
+
+.button span {
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+  z-index: 1;
+  text-align: center;
+  animation: textAnimation 2s infinite;
+  background-image: linear-gradient(to top, #d9afd9 0%, #f7df56 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.button:hover {
+ 
+
+ 
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  transform: scale(0.95) translate(-50%, -150%);
+  box-shadow: none;
+}
+
+@keyframes textAnimation {
+  0%, 100% {
+    filter: brightness(1);
+    transform: scale(1);
+  }
+  50% {
+    filter: brightness(1.5);
+    transform: scale(1.05);
+  }
+}
+
+.tv-image{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  
+
+}
+.watch-image{
+  background-size: contain;
+
+ object-fit: contain;
+
+
 }
