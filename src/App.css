@@ -1,8 +1,8 @@
 .App {
   text-align: center;
 }
-html, body {
-  margin:none;
+ * {
+  margin:0;
 
 }
 .spinner {
@@ -61,17 +61,18 @@ html, body {
   flex-wrap: wrap;
   gap: 40px;
   justify-content: space-around;
-  background: #780206; /* fallback for old browsers */
+   /* background: #780206; 
   background: -webkit-linear-gradient(
     to right,
     #061161,
     #780206
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to right,
     #061161,
     #780206
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  );   */
+ background-color: rgb(120,38,114);
 }
 /* 
 .card{
@@ -286,6 +287,72 @@ html, body {
   height: 50vh;
   width: 100%;
 
-  background-image: linear-gradient(to bottom, #872e31, #a02c32, #b92832, #d22031, #eb122f);
+  /* background-image: linear-gradient(to bottom, #872e31, #a02c32, #b92832, #d22031, #eb122f); */
+ background-color:  rgb(237,56,51);
+}
 
+.announce-prize-image{
+  height:250px;
+  width: 400px;
+  opacity: 1;
+  overflow: hidden;
+  transition: opacity 0.5s, height 0.5s;
+}
+
+.grandpage{
+  overflow: hidden;
+
+}
+
+
+/* .transition-announce{
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s, max-height 0.5s;
+
+
+}
+
+
+.transition-winners{
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s, max-height 0.5s;
+
+} */
+
+.transition-element {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 3s ease, max-height .5s ease;
+
+}
+.transition-element img{
+  margin-top: 35px;
+}
+
+
+
+.transition-element.show {
+  opacity: 1;
+  max-height: 500px; /* Adjust the value as needed */
+  transition: opacity 3s ease, max-height .5s ease;
+}
+
+
+.yet-to-implement-div{
+  height: 100vh;
+  width: 100%;
+  background-color: #b69dde;
+}
+
+.yet-to-implement-div h1{
+  font-size: 100px;
+  font-weight: 600;
+  color: rgb(64, 88, 64);
+  font-style: italic;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

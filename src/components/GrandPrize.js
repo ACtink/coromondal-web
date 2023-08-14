@@ -7,7 +7,14 @@ function GrandPrize() {
 
   const [isSpinnerVisible, setIsSpinnerVisible] = useState(false);
   const [revealPrize , setRevealPrize] = useState(false);
-  const [showWinners , setShowWinners] = useState(false)
+  const [showWinners , setShowWinners] = useState(false);
+  const [isShowing, setIsShowing] = useState(false);
+
+
+  const toggleElement = () => {
+    setIsShowing(true);
+  };
+
 
   const handleCardClick = () => {
     setIsCardVisible(false);
@@ -17,11 +24,14 @@ function GrandPrize() {
   const handleAnnounceImage = ()=>{
     setRevealPrize(false)
     setShowWinners(true)
+    setIsShowing(true)
+   
+    
 
   }
 
   return (
-    <>
+    <div className="grandpage">
       <div className="grandPrize">
         <img src="grandprize.gif" className="grandprize-image" alt="" />
       </div>
@@ -42,13 +52,15 @@ function GrandPrize() {
               setIsSpinnerVisible={setIsSpinnerVisible}
               revealPrize={revealPrize}
               setRevealPrize={setRevealPrize}
+              setIsShowing={setIsShowing}
+           
             />
           </div>
         )}
         {
             revealPrize && (
-                <div onClick={handleAnnounceImage}>
-                    <img src="announce-grand-prize.png" alt="grand-prize-announcement" />
+                <div className={`transition-element ${isShowing ? 'show' : ''}`} onClick={handleAnnounceImage}>
+                    <img src="announce-grand-prize.png" className="announce-prize-image" alt="grand-prize-announcement" />
 
                     </div>
             )
@@ -56,7 +68,7 @@ function GrandPrize() {
 
         {
             showWinners && (
-                <div>
+                <div className={`transition-element ${isShowing ? 'show' : ''}`} >
                      <img src="grandprizewinners.png" alt="grand-prize-announcement" />
                 </div>
             )
@@ -64,7 +76,7 @@ function GrandPrize() {
         }
 
       </div>
-    </>
+    </div>
   );
 }
 

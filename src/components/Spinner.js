@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../spinner.css";
 
-function Spinner({isSpinnerVisible,setIsSpinnerVisible, revealPrize , setRevealPrize}) {
+function Spinner({isSpinnerVisible,setIsSpinnerVisible, revealPrize , setRevealPrize , setIsShowing}) {
 
 
   const [animationClass, setAnimationClass] = useState("");
@@ -18,11 +18,13 @@ setTimeout(()=>{
     setAnimationClass("")
     setIsSpinnerVisible(false)
     setRevealPrize(true)
+    setIsShowing(true)
+    
 
 
     
 
-},7000)
+},10000)
 
    // Apply the animation class
     console.log(animationClass)
