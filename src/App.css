@@ -1,15 +1,21 @@
 .App {
   text-align: center;
 }
+html, body {
+  margin:none;
 
-.App-logo {
+}
+.spinner {
   height: 40vmin;
   pointer-events: none;
+  
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 5s linear;
+  .spinner-spin {
+    animation: spinner-spin infinite .5s linear;
+    transform-origin: center;
   }
 }
 
@@ -28,7 +34,7 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes spinner-spin {
   from {
     transform: rotate(0deg);
   }
@@ -46,8 +52,6 @@
   background-size: cover;
   background-position: center;
   object-fit: cover; */
-  
- 
 }
 
 .card-container {
@@ -87,7 +91,7 @@
   border: 15px solid transparent; /* Initial transparent border */
   border-radius: 10px;
   position: relative;
- 
+
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
@@ -95,8 +99,9 @@
   transition: transform 0.3s, box-shadow 0.3s;
   margin-top: 50px;
   box-shadow: 10px 10px 20px rgba(35, 34, 23, 0.3);
- 
-  animation: glow 1s infinite alternate, floatingAnimation 1s infinite alternate ease-in-out;
+
+  animation: glow 1s infinite alternate,
+    floatingAnimation 1s infinite alternate ease-in-out;
   border: 2px solid #00aaff; /* Glow color */
 }
 /* .card::before {
@@ -111,7 +116,6 @@
   transform: scale(0);
   transition: transform .8s, opacity 0.3s;
 } */
-
 
 .card:hover {
   transform: translateY(-10px) scale(1.05);
@@ -148,27 +152,20 @@
   }
 }
 
-
-.card-image-container{
+.card-image-container {
   height: 100%;
   width: 100%;
-  
 }
 
-.banner-image{
+.banner-image {
   height: 50vh;
   width: 100%;
-
-  
-  
-
 }
 
-.card-image{
+.card-image {
   height: 100%;
   width: 100%;
   border-radius: 4% 4% 0 0;
-
 }
 
 /* button{
@@ -179,16 +176,21 @@
    margin-top: 45px;
 } */
 
-.button-link{
+.button-link {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .button {
- height: 60px;
- width: 120px;
+  height: 60px;
+  width: 120px;
   padding: 15px 50px;
-  background-image: linear-gradient(-225deg, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%);
+  background-image: linear-gradient(
+    -225deg,
+    #ff3cac 0%,
+    #562b7c 52%,
+    #2b86c5 100%
+  );
   border: none;
   display: flex;
   justify-content: center;
@@ -202,9 +204,8 @@
   transition: transform 0.2s, box-shadow 0.2s;
   margin-top: 40px;
   top: 60%;
-  
+
   /* transform: translate(-50%, -150%); */
-  
 }
 
 .button span {
@@ -221,9 +222,6 @@
 }
 
 .button:hover {
- 
-
- 
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -233,7 +231,8 @@
 }
 
 @keyframes textAnimation {
-  0%, 100% {
+  0%,
+  100% {
     filter: brightness(1);
     transform: scale(1);
   }
@@ -243,17 +242,50 @@
   }
 }
 
-.tv-image{
+.tv-image {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  
-
 }
-.watch-image{
+.watch-image {
   background-size: contain;
 
- object-fit: contain;
+  object-fit: contain;
+}
 
+.grandPrize {
+  height: 50vh;
+  width: 100%;
+}
+
+.grandprize-image {
+  height: 50vh;
+  width: 100%;
+}
+
+.grand-page-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grand-page-card-container .card{
+  margin-top: 25px;
+}
+
+
+
+.spinner-container{
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.items-container{
+  height: 50vh;
+  width: 100%;
+
+  background-image: linear-gradient(to bottom, #872e31, #a02c32, #b92832, #d22031, #eb122f);
 
 }

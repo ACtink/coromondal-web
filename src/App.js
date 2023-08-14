@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import Blogs from "./components/Blogs";
+import GrandPrize from "./components/GrandPrize";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/">
           <Route path="/" element={<Home />} />
-          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/grandprize" element={<GrandPrize />} />
         </Route>
       </Routes>
     </div>

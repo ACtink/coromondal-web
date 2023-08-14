@@ -12,7 +12,7 @@ function Home() {
           <div className="card-image-container">
             <img src="1.gif"  className="card-image" alt="" />
           </div>
-          <Link to="/blogs" className="button-link"><button class="button">
+          <Link to="/grandprize" className="button-link"><button class="button">
             <span>Grand Prize</span>
           </button></Link> 
           
