@@ -274,22 +274,44 @@
 }
 
 
-
+/* 
 .spinner-container{
-  height: 200px;
-  width: 200px;
+  height: 400px;
+  width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.spinner-container img{
+  margin-top: 20px;
+} */
 
 .items-container{
   height: 50vh;
   width: 100%;
+  position: absolute;
+  top:17px;
+  left:20px;
 
   /* background-image: linear-gradient(to bottom, #872e31, #a02c32, #b92832, #d22031, #eb122f); */
- background-color:  rgb(237,56,51);
+ /* background-image: url("../public/grandprize-down-portion.gif"); */
+ background-size: cover;
+ background-repeat: no-repeat;
+ object-fit: cover;
 }
+.grandprize-down-portion{
+  height: 50vh;
+  width: 100%;
+  position: relative;
+
+
+}
+
+.grand-down-image{
+  height:50vh;
+  width: 100%;
+}
+
 
 .announce-prize-image{
   height:250px;
@@ -303,6 +325,13 @@
   overflow: hidden;
 
 }
+
+.grand-winners-image{
+  height:280px;
+  width: 430px;
+}
+
+
 
 
 /* .transition-announce{

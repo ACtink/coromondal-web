@@ -46,7 +46,7 @@ setTimeout(()=>{
 
     //   </div>
     <>
-      <div onClick={handleSpinnerClick}>
+      <div className="spinner-container" onClick={handleSpinnerClick}>
     
         <img
           src="spinphoto.png"

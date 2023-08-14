@@ -35,6 +35,8 @@ function GrandPrize() {
       <div className="grandPrize">
         <img src="grandprize.gif" className="grandprize-image" alt="" />
       </div>
+      <div className="grandprize-down-portion">
+         <img className="grand-down-image" src="grandprize-down-portion.gif" alt="" />
       <div className="items-container">
         {isCardVisible && (
           <div className="grand-page-card-container">
@@ -60,7 +62,7 @@ function GrandPrize() {
         {
             revealPrize && (
                 <div className={`transition-element ${isShowing ? 'show' : ''}`} onClick={handleAnnounceImage}>
-                    <img src="announce-grand-prize.png" className="announce-prize-image" alt="grand-prize-announcement" />
+                    <img src="thankyou.gif" className="announce-prize-image" alt="grand-prize-announcement" />
 
                     </div>
             )
@@ -69,12 +71,13 @@ function GrandPrize() {
         {
             showWinners && (
                 <div className={`transition-element ${isShowing ? 'show' : ''}`} >
-                     <img src="grandprizewinners.png" alt="grand-prize-announcement" />
+                     <img src="grandprizeWinners.gif" className="grand-winners-image" alt="grand-prize-announcement" />
                 </div>
             )
 
         }
 
+      </div>
       </div>
     </div>
   );
