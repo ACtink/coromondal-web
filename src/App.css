@@ -290,7 +290,7 @@
   height: 50vh;
   width: 100%;
   position: absolute;
-  top:17px;
+  top:5px;
   left:20px;
 
   /* background-image: linear-gradient(to bottom, #872e31, #a02c32, #b92832, #d22031, #eb122f); */
@@ -314,8 +314,8 @@
 
 
 .announce-prize-image{
-  height:250px;
-  width: 400px;
+  height:320px;
+  width: 500px;
   opacity: 1;
   overflow: hidden;
   transition: opacity 0.5s, height 0.5s;
@@ -327,8 +327,10 @@
 }
 
 .grand-winners-image{
-  height:280px;
-  width: 430px;
+  height:450px;
+  width: 700px;
+  margin-top: 3px;
+  background-size: cover;
 }
 
 
@@ -356,6 +358,7 @@
   opacity: 0;
   max-height: 0;
   overflow: hidden;
+ 
   transition: opacity 3s ease, max-height .5s ease;
 
 }
