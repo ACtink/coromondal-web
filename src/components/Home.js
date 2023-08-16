@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CarouselC from "./CarouselC";
+import '../carousal.css'
 
 function Home() {
   return (
@@ -15,6 +17,7 @@ function Home() {
       {/* <div className="home-down-portion"> */}
 
       <div className="card-container">
+
       <img className="home-down-image" src="/images/home_page_2.gif" alt="" />
       <Link to="/grandprize" className="button-link">
         <div className="card">
@@ -79,7 +82,9 @@ function Home() {
           </div>
           </Link>
         </div>
+ 
       </div>
+      
       {/* </div> */}
     </>
   );

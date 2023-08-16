@@ -1,21 +1,31 @@
 import React from "react";
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-export default function CarouselC() {
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  ButtonBack,
+  ButtonNext
+} from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
+
+export default function CarouselC({children}) {
+  
     return (
-       
-        <div className="carousel-wrapper">
-            <Carousel infiniteLoop useKeyboardArrows autoPlay>
-                <div>
-                    <img src="1.gif" alt="" />
-                </div>
-                <div>
-                    <img src="2.gif" alt="" />
-                </div>
-                <div>
-                    <img src="3.gif" alt="" />
-                </div>
-            </Carousel>
-        </div>
+      <CarouselProvider
+        naturalSlideWidth={100}
+        naturalSlideHeight={125}
+        totalSlides={8}
+        visibleSlides={1}
+        currentSlide={1}
+      >
+        <Slider>
+          <Slide index={0}> { children}</Slide>
+        
+        
+        </Slider>
+        <ButtonBack>Back</ButtonBack>
+        <ButtonNext>Next</ButtonNext>
+      </CarouselProvider>
     );
-}
+  }
+
