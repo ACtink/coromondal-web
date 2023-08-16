@@ -55,12 +55,14 @@
 }
 
 .card-container {
+  height: 50vh;
   width: 100%;
   height: calc(100%-30vh);
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-around;
+  gap: 5px;
+  justify-content: space-evenly;
+  overflow: hidden;
    /* background: #780206; 
   background: -webkit-linear-gradient(
     to right,
@@ -72,7 +74,7 @@
     #061161,
     #780206
   );   */
- background-color: rgb(120,38,114);
+ /* background-color: rgb(120,38,114); */
 }
 /* 
 .card{
@@ -86,8 +88,8 @@
 } */
 
 .card {
-  width: 300px;
-  height: 400px;
+  width: 200px;
+  height: 300px;
   background-color: #f0f0f0;
   border: 15px solid transparent; /* Initial transparent border */
   border-radius: 10px;
@@ -153,10 +155,10 @@
   }
 }
 
-.card-image-container {
-  height: 100%;
-  width: 100%;
-}
+/* .card-image-container {
+  height: 400px;
+  width: 600px;
+} */
 
 .banner-image {
   height: 50vh;
@@ -268,23 +270,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 60px;
 }
 .grand-page-card-container .card{
   margin-top: 25px;
 }
 
 
-/* 
-.spinner-container{
+
+/* .spinner-container{
   height: 400px;
   width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.spinner-container img{
-  margin-top: 20px;
 } */
+.spinner-container img{
+  margin-top: 55px;
+}
 
 .items-container{
   height: 50vh;
@@ -321,8 +324,9 @@
   transition: opacity 0.5s, height 0.5s;
 }
 
-.grandpage{
-  overflow: hidden;
+.wholepage{
+  position: relative;
+ 
 
 }
 
@@ -388,3 +392,72 @@
   font-style: italic;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+.home-down-portion{
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+ 
+  
+}
+
+.home-down-image{
+  height: 50vh;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+ 
+}
+
+
+.nav-buttons-container{
+  position: absolute;
+  height: 80px;
+  width: 350px;
+  top: 40px;
+  left: 175px;
+  display: flex;
+  justify-content: flex-start;
+  
+}
+.nav-buttons-container button{
+  height: 48px;
+  width: 130px;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+   font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+ 
+/* Medium-sized home button with gradient background */
+.medium-home-button {
+  display: inline-block;
+  /* padding: 12px 2px; */
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  color: #161212;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-image: linear-gradient(45deg, #cca8a8, #d0ac88, #655c6f, #cccbd9, #4a4a89, #b082d4);
+
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effect */
+.medium-home-button:hover {
+  background-image: linear-gradient(45deg, #ff6b6b, #3e625e);
+}
+
+/* Active effect */
+.medium-home-button:active {
+  transform: scale(0.95);
+  color: #f6f2f2;
+  font-weight: 900;
+}
+
+
