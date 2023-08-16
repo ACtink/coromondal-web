@@ -6,6 +6,7 @@ import '../carousal.css'
 function Home() {
   return (
     <>
+    <div className="outer">
       <div className="home">
       <div className="nav-buttons-container">
         <Link to={"/"} >
@@ -60,7 +61,7 @@ function Home() {
           </button></Link> */}
         </div>
         </Link>
-        <div className="inner-container">
+        {/* <div className="inner-container"> */}
         <Link to="/fourthprize" className="button-link">
           <div className="card">
             <div className="card-image-container">
@@ -81,11 +82,12 @@ function Home() {
             </button></Link> */}
           </div>
           </Link>
-        </div>
+        {/* </div> */}
  
       </div>
       
       {/* </div> */}
+      </div>
     </>
   );
 }
