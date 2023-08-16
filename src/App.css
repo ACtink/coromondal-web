@@ -94,6 +94,7 @@
   border: 15px solid transparent; /* Initial transparent border */
   border-radius: 10px;
   position: relative;
+  cursor: pointer;
 
   overflow: hidden;
   border-radius: 10px;
@@ -278,15 +279,12 @@
 
 
 
-/* .spinner-container{
-  height: 400px;
-  width: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+.spinner-container{
+ cursor: pointer;
+}
 .spinner-container img{
   margin-top: 55px;
+ 
 }
 
 .items-container{
@@ -362,6 +360,7 @@
   opacity: 0;
   max-height: 0;
   overflow: hidden;
+  cursor: pointer;
  
   transition: opacity 3s ease, max-height .5s ease;
 
@@ -415,7 +414,7 @@
   position: absolute;
   height: 80px;
   width: 350px;
-  top: 40px;
+  top: 36px;
   left: 175px;
   display: flex;
   justify-content: flex-start;
