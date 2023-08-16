@@ -9,6 +9,7 @@ import SecondPrize from "./components/SecondPrize";
 import ThirdPrize from "./components/ThirdPrize";
 import FourthPrize from "./components/FourthPrize";
 import FifthPrize from "./components/FifthPrize";
+import CarouselC from "./components/CarouselC";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/thirdprize" element={<ThirdPrize/>}/>
           <Route path="/fourthprize" element={<FourthPrize/>}/>
           <Route path="/fifthprize" element={<FifthPrize/>}/>
+          <Route  path="cara" element={<CarouselC/>} />
           <Route path="/*" element={<YetToImplement/>}/>
 
         </Route>

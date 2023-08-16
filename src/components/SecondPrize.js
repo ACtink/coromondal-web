@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Spinner from "./Spinner";
+import SliderContainer from "./SliderContainer";
 
 function SecondPrize() {
   const [isCardVisible, setIsCardVisible] = useState(true);
@@ -75,13 +76,15 @@ function SecondPrize() {
             )
         }
 
-        {
+        {/* {
             showWinners && (
                 <div className={`transition-element ${isShowing ? 'show' : ''}`} >
                      <img src="grandprizeWinners.gif" className="grand-winners-image" alt="grand-prize-announcement" />
                 </div>
             )
 
+        } */}   {
+            showWinners && (<SliderContainer/>)
         }
 
       </div>
