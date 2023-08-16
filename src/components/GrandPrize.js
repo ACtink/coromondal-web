@@ -38,10 +38,10 @@ function GrandPrize() {
         </Link>
         </div>
       <div className="grandPrize">
-        <img src="/images/grand_prize_1.gif" className="grandprize-image" alt="" />
+        <img src="/images/Grand_prize_1.gif" className="grandprize-image" alt="" />
       </div>
       <div className="grandprize-down-portion">
-         <img className="grand-down-image" src="/images/grand_prize_2.gif" alt="" />
+         <img className="grand-down-image" src="/images/Grand_prize_2.gif" alt="" />
       <div className="items-container">
         {isCardVisible && (
           <div className="grand-page-card-container">
