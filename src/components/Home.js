@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import CarouselC from "./CarouselC";
 import '../carousal.css'
+import { ShowNewGrandPageContext } from "./GrandPageContext";
 
 function Home() {
+
+  const [showSecondGrandPage, setShowSecondGrandPage] = useContext(ShowNewGrandPageContext);
+  
+
   return (
     <>
     <div className="outer">
@@ -13,17 +18,17 @@ function Home() {
         <button className="home-button medium-home-button">Home</button>
         </Link>
         </div>
-        <img src="/images/home_page_1.gif" className="banner-image" alt="" />
+        <img src="/pics/creatives/home-up.gif" className="banner-image" alt="" />
       </div>
       {/* <div className="home-down-portion"> */}
 
       <div className="card-container">
 
-      <img className="home-down-image" src="/images/home_page_2.gif" alt="" />
-      <Link to="/grandprize" className="button-link">
+      <img className="home-down-image" src="/pics/creatives/home-down.gif" alt="" />
+      <Link to={showSecondGrandPage ? "/secondgrandprize" : "/grandprize"} className="button-link">
         <div className="card">
           <div className="card-image-container">
-            <img src="1.gif"  className="card-image" alt="" />
+            <img src="/pics/grand-card.gif"  className="card-image" alt="" />
           </div>
           {/* <Link to="/grandprize" className="button-link"><button class="button">
             <span>Grand Prize</span>
@@ -54,7 +59,7 @@ function Home() {
         <Link to="/thirdprize" className="button-link">
         <div className="card">
           <div className="card-image-container">
-          <img src="4.gif" className=" card-image" alt="" />
+          <img src="/pics/third-card.gif" className=" card-image" alt="" />
           </div>
           {/* <Link to="/3rdPrize" className="button-link"><button class="button">
             <span>3rd Prize</span>
@@ -75,7 +80,7 @@ function Home() {
           <Link to="/fifthprize" className="button-link">
           <div className="card">
             <div className="card-image-container">
-            <img src="6.gif" className=" card-image" alt="" />
+            <img src="/pics/fifth-card.gif" className=" card-image" alt="" />
             </div>
             {/* <Link to="/5thPrize" className="button-link"><button class="button">
               <span>5th Prize</span>
@@ -83,6 +88,8 @@ function Home() {
           </div>
           </Link>
         {/* </div> */}
+
+      
  
       </div>
       

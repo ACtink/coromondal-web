@@ -7,11 +7,12 @@ import SliderContainer from "./SliderContainer";
 
 function FirstPrize() {
   const [isCardVisible, setIsCardVisible] = useState(true);
-
   const [isSpinnerVisible, setIsSpinnerVisible] = useState(false);
+
   const [revealPrize , setRevealPrize] = useState(false);
   const [showWinners , setShowWinners] = useState(false);
-  const [isShowing, setIsShowing] = useState(false);
+  const [isShowing, setIsShowing] = useState(true);
+  const [announceWinner , setAnnounceWinner] = useState(false);
 
 
   const toggleElement = () => {
@@ -22,12 +23,14 @@ function FirstPrize() {
   const handleCardClick = () => {
     setIsCardVisible(false);
     setIsSpinnerVisible(true);
+    
   };
 
   const handleAnnounceImage = ()=>{
-    setRevealPrize(false)
+    
     setShowWinners(true)
     setIsShowing(true)
+    setAnnounceWinner(false)
    
     
 
@@ -41,10 +44,10 @@ function FirstPrize() {
     </Link>
     </div>
       <div className="grandPrize">
-        <img src="/images/first_prize_1.gif" className="grandprize-image" alt="" />
+        <img src="/pics/creatives/first-winner-up.gif" className="grandprize-image" alt="" />
       </div>
       <div className="grandprize-down-portion">
-         <img className="grand-down-image" src="/images/first_prize_2.gif" alt="" />
+         <img className="grand-down-image" src="/pics/creatives/first-winner-down.gif" alt="" />
       <div className="items-container">
         {isCardVisible && (
           <div className="grand-page-card-container">
@@ -60,7 +63,8 @@ function FirstPrize() {
             <Spinner
               isSpinnerVisible={isSpinnerVisible}
               setIsSpinnerVisible={setIsSpinnerVisible}
-              revealPrize={revealPrize}
+              announceWinner={announceWinner}
+              setAnnounceWinner={setAnnounceWinner}
               setRevealPrize={setRevealPrize}
               setIsShowing={setIsShowing}
            
@@ -68,7 +72,7 @@ function FirstPrize() {
          
         )}
         {
-            revealPrize && (
+            announceWinner && (
                 <div className={`transition-element ${isShowing ? 'show' : ''}`} onClick={handleAnnounceImage}>
                     <img src="/images/third_step_image.gif" className="announce-prize-image" alt="grand-prize-announcement" />
 

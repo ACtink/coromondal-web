@@ -12,6 +12,7 @@ function SecondPrize() {
   const [revealPrize , setRevealPrize] = useState(false);
   const [showWinners , setShowWinners] = useState(false);
   const [isShowing, setIsShowing] = useState(false);
+  const [announceWinner , setAnnounceWinner] = useState(false);
 
 
   const toggleElement = () => {
@@ -28,6 +29,7 @@ function SecondPrize() {
     setRevealPrize(false)
     setShowWinners(true)
     setIsShowing(true)
+    setAnnounceWinner(false)
    
     
 
@@ -41,10 +43,10 @@ function SecondPrize() {
         </Link>
         </div>
       <div className="grandPrize">
-        <img src="/images/second_prize_1.gif" className="grandprize-image" alt="" />
+        <img src="/pics/creatives/second-winner-up.gif" className="grandprize-image" alt="" />
       </div>
       <div className="grandprize-down-portion">
-         <img className="grand-down-image" src="/images/second_prize_2.gif" alt="" />
+         <img className="grand-down-image" src="/pics/creatives/second-winner-down.gif" alt="" />
       <div className="items-container">
         {isCardVisible && (
           <div className="grand-page-card-container">
@@ -63,12 +65,14 @@ function SecondPrize() {
               revealPrize={revealPrize}
               setRevealPrize={setRevealPrize}
               setIsShowing={setIsShowing}
+              announceWinner={announceWinner}
+              setAnnounceWinner={setAnnounceWinner}
            
             />
           </div>
         )}
         {
-            revealPrize && (
+            announceWinner && (
                 <div className={`transition-element ${isShowing ? 'show' : ''}`} onClick={handleAnnounceImage}>
                     <img src="/images/third_step_image.gif" className="announce-prize-image" alt="grand-prize-announcement" />
 

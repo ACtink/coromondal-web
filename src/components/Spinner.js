@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "../spinner.css";
 
-function Spinner({isSpinnerVisible,setIsSpinnerVisible, revealPrize , setRevealPrize , setIsShowing}) {
+function Spinner({isSpinnerVisible,setIsSpinnerVisible, setAnnounceWinner, setShowFirstSelected , setIsShowing}) {
 
 
   const [animationClass, setAnimationClass] = useState("");
   
 
-  console.log(isSpinnerVisible , setIsSpinnerVisible)
+  // console.log(isFirstSpinnerVisible , setIsFirstSpinnerVisible)
 
   const handleSpinnerClick = () => {
 
@@ -17,14 +17,17 @@ function Spinner({isSpinnerVisible,setIsSpinnerVisible, revealPrize , setRevealP
 setTimeout(()=>{
     setAnimationClass("")
     setIsSpinnerVisible(false)
-    setRevealPrize(true)
+    if(setShowFirstSelected){
+    setShowFirstSelected(true)
+    }
     setIsShowing(true)
+    setAnnounceWinner(true)
     
 
 
     
 
-},10000)
+},4000)
 
    // Apply the animation class
     console.log(animationClass)

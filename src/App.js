@@ -10,14 +10,27 @@ import ThirdPrize from "./components/ThirdPrize";
 import FourthPrize from "./components/FourthPrize";
 import FifthPrize from "./components/FifthPrize";
 import CarouselC from "./components/CarouselC";
+import GrandPrize2 from "./components/GrandPrize2";
+import { createContext, useContext, useState } from 'react';
+import { ShowNewGrandPageContext } from "./components/GrandPageContext";
 
 function App() {
+
+   const [showSecondGrandPage , setShowSecondGrandPage] = useState(false)
+
+// const ShowNewGrandPageContext = createContext(false);
+
+
+
   return (
     <div className="App">
+       <ShowNewGrandPageContext.Provider value={[showSecondGrandPage, setShowSecondGrandPage]}>
       <Routes>
         <Route path="/">
           <Route path="/" element={<Home />} />
           <Route path="/grandprize" element={<GrandPrize />} />
+          <Route path="/secondgrandprize" element={<GrandPrize2 />} />
+
           <Route path="/firstprize" element={<FirstPrize/>}/>
           <Route path="/secondprize" element={<SecondPrize/>}/>
           <Route path="/thirdprize" element={<ThirdPrize/>}/>
@@ -28,6 +41,8 @@ function App() {
 
         </Route>
       </Routes>
+      </ShowNewGrandPageContext.Provider>
+     
     </div>
   );
 }

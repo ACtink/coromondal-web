@@ -12,6 +12,7 @@ function ThirdPrize() {
   const [revealPrize , setRevealPrize] = useState(false);
   const [showWinners , setShowWinners] = useState(false);
   const [isShowing, setIsShowing] = useState(false);
+  const [announceWinner , setAnnounceWinner] = useState(false);
 
 
   const toggleElement = () => {
@@ -28,6 +29,7 @@ function ThirdPrize() {
     setRevealPrize(false)
     setShowWinners(true)
     setIsShowing(true)
+    setAnnounceWinner(false)
    
     
 
@@ -41,16 +43,16 @@ function ThirdPrize() {
         </Link>
         </div>
       <div className="grandPrize">
-        <img src="/images/third_prize_1.gif" className="grandprize-image" alt="" />
+        <img src="/pics/creatives/third-winner-up.gif" className="grandprize-image" alt="" />
       </div>
       <div className="grandprize-down-portion">
-         <img className="grand-down-image" src="/images/third_prize_2.gif" alt="" />
+         <img className="grand-down-image" src="/pics/creatives/third-winner-down.gif" alt="" />
       <div className="items-container">
         {isCardVisible && (
           <div className="grand-page-card-container">
             <div className="card" onClick={handleCardClick}>
               <div className="card-image-container">
-                <img src="4.gif" className="card-image" alt="" />
+                <img src="/pics/third-card.gif" className="card-image" alt="" />
               </div>
             </div>
           </div>
@@ -63,12 +65,14 @@ function ThirdPrize() {
               revealPrize={revealPrize}
               setRevealPrize={setRevealPrize}
               setIsShowing={setIsShowing}
+              announceWinner={announceWinner}
+              setAnnounceWinner={setAnnounceWinner}
            
             />
           </div>
         )}
         {
-            revealPrize && (
+            announceWinner && (
                 <div className={`transition-element ${isShowing ? 'show' : ''}`} onClick={handleAnnounceImage}>
                     <img src="/images/third_step_image.gif" className="announce-prize-image" alt="grand-prize-announcement" />
 
