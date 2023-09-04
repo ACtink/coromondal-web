@@ -53,7 +53,7 @@ function FirstPrize() {
           <div className="grand-page-card-container">
             <div className="card" onClick={handleCardClick}>
               <div className="card-image-container">
-                <img src="/requirements/cards/2.gif" className="card-image" alt="" />
+                <img src="2.gif" className="card-image" alt="" />
               </div>
             </div>
           </div>

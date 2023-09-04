@@ -45,7 +45,7 @@ function Home() {
       <Link to={showSecondGrandPage || showGrandPage2 ? "/secondgrandprize" : "/grandprize"} className="button-link">
         <div className="card">
           <div className="card-image-container">
-            <img src="/requirements/cards/1.gif"  className="card-image" alt="" />
+            <img src="1.gif"  className="card-image" alt="" />
           </div>
           {/* <Link to="/grandprize" className="button-link"><button class="button">
             <span>Grand Prize</span>
@@ -55,7 +55,7 @@ function Home() {
         <Link to="/firstprize" className="button-link">
         <div className="card">
           <div className="card-image-container">
-          <img src="/requirements/cards/2.gif" className="card-image" alt="" />
+          <img src="2.gif" className="card-image" alt="" />
           </div>
           {/* <Link to="/1stPrize" className="button-link"><button class="button">
             <span>1st Prize</span>
@@ -65,7 +65,7 @@ function Home() {
         <Link to="/secondprize" className="button-link">
         <div className="card">
           <div className="card-image-container">
-          <img src="/requirements/cards/3.gif" className="card-image" alt="" />
+          <img src="3.gif" className="card-image" alt="" />
           </div>
         
           {/* <Link to="/2ndPrize" className="button-link"><button class="button">
@@ -76,7 +76,7 @@ function Home() {
         <Link to="/thirdprize" className="button-link">
         <div className="card">
           <div className="card-image-container">
-          <img src="/requirements/cards/4.gif" className=" card-image" alt="" />
+          <img src="4.gif" className=" card-image" alt="" />
           </div>
           {/* <Link to="/3rdPrize" className="button-link"><button class="button">
             <span>3rd Prize</span>
@@ -87,7 +87,7 @@ function Home() {
         <Link to="/fourthprize" className="button-link">
           <div className="card">
             <div className="card-image-container">
-            <img src="/requirements/cards/5.gif" className="card-image" alt="" />
+            <img src="5.gif" className="card-image" alt="" />
             </div>
             {/* <Link to="/4thPrize" className="button-link"><button class="button">
               <span>4rth Prize</span>
@@ -97,7 +97,7 @@ function Home() {
           <Link to="/fifthprize" className="button-link">
           <div className="card">
             <div className="card-image-container">
-            <img src="/requirements/cards/6.gif" className=" card-image" alt="" />
+            <img src="6.gif" className=" card-image" alt="" />
             </div>
             {/* <Link to="/5thPrize" className="button-link"><button class="button">
               <span>5th Prize</span>

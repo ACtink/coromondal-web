@@ -53,7 +53,7 @@ function FifthPrize() {
           <div className="grand-page-card-container">
             <div className="card" onClick={handleCardClick}>
               <div className="card-image-container">
-                <img src="/requirements/cards/6.gif" className="card-image" alt="" />
+                <img src="6.gif" className="card-image" alt="" />
               </div>
             </div>
           </div>

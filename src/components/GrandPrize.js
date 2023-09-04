@@ -130,7 +130,7 @@ function GrandPrize() {
                 <div className="card" onClick={handleCardClick}>
                   <div className="card-image-container ">
                     <img
-                      src="/requirements/cards/1.gif"
+                      src="1.gif"
                       className="card-image "
                       alt=""
                     />
