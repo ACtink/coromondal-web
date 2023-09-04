@@ -26,9 +26,11 @@ function GrandPrize() {
       : false
   );
   const [showWinners, setShowWinners] = useState(false);
-  const [isShowing, setIsShowing] = useState( JSON.parse(localStorage.getItem("isShowing")) === true
-  ? JSON.parse(localStorage.getItem("isShowing"))
-  : false);
+  const [isShowing, setIsShowing] = useState(
+    JSON.parse(localStorage.getItem("isShowing")) === true
+      ? JSON.parse(localStorage.getItem("isShowing"))
+      : false
+  );
   const [showSecondSelected, setShowSecondSelected] = useState(
     JSON.parse(localStorage.getItem("setShowSecondSelected")) === true
       ? JSON.parse(localStorage.getItem("setShowSecondSelected"))
@@ -50,7 +52,6 @@ function GrandPrize() {
     console.log(JSON.parse(localStorage.getItem("showItemsContainer")));
   }
 
-
   const [showSecondGrandPage, setShowSecondGrandPage] = useContext(
     ShowNewGrandPageContext
   );
@@ -68,7 +69,6 @@ function GrandPrize() {
     setIsCardVisible(false);
     setIsSpinnerVisible(true);
     setIsSecondSpinnerVisible(true);
-
   };
 
   // const handleAnnounceImage = ()=>{
@@ -80,21 +80,19 @@ function GrandPrize() {
   // }
 
   const resetAllStateValues = () => {
-
-   const response  = window.confirm("Are you sure you want to Reset ? This will clear all your progress.")
-   if(response){
-    setShowSecondGrandPage(false);
-    localStorage.removeItem("showItemsContainer");
-    localStorage.removeItem("cardVisible");
-    localStorage.removeItem("isSpinnerVisible");
-    localStorage.removeItem("isSecondSpinnerVisible");
-    localStorage.removeItem("setShowFirstSelected");
-    localStorage.removeItem("setShowSecondSelected");
-    localStorage.removeItem("isShowing");
-    
-   }
-    
-
+    const response = window.confirm(
+      "Are you sure you want to Reset ? This will clear all your progress."
+    );
+    if (response) {
+      setShowSecondGrandPage(false);
+      localStorage.removeItem("showItemsContainer");
+      localStorage.removeItem("cardVisible");
+      localStorage.removeItem("isSpinnerVisible");
+      localStorage.removeItem("isSecondSpinnerVisible");
+      localStorage.removeItem("setShowFirstSelected");
+      localStorage.removeItem("setShowSecondSelected");
+      localStorage.removeItem("isShowing");
+    }
   };
 
   return (
