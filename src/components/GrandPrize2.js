@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Spinner from "./Spinner";
 import Spinner2 from "./Spinner2";
+import { ShowNewGrandPageContext } from "./GrandPageContext";
 
 function GrandPrize2() {
   const [showFirstWinner, setShowFirstWinner] = useState(false);
@@ -10,6 +11,13 @@ function GrandPrize2() {
  
   const [announceWinners , setAnnounceWinners] = useState(true);
   const [isShowing, setIsShowing] = useState(true);
+
+  const [firstSelected , setFirstSelected] = useState(true)
+  const [secondSelected , setSecondSelected] = useState(true)
+
+  const [showGrandPage2 , setShowgrandPage2] = useContext(
+    ShowNewGrandPageContext
+  );
  
 
 
@@ -44,53 +52,109 @@ function GrandPrize2() {
 
   }
 
+  const showFirstGrandWinner = ()=>{
+    setFirstSelected(false)
+    setShowFirstWinner(true)
+    setIsShowing(true)
+    // setShowgrandPage2(true)
+   
+  }
+
+  const showSecondGrandWinner= ()=>{
+    setSecondSelected(false)
+    setShowSecondWinner(true)
+    setIsShowing(true)
+    // setShowgrandPage2(true)
+   
+
+  }
+
+  const resetAllStateValues = () => {
+
+    const response  = window.confirm("Are you sure you want to Reset ? This will clear all your progress.")
+    if(response){
+    
+     localStorage.removeItem("showItemsContainer");
+     localStorage.removeItem("cardVisible");
+     localStorage.removeItem("isSpinnerVisible");
+     localStorage.removeItem("isSecondSpinnerVisible");
+     localStorage.removeItem("setShowFirstSelected");
+     localStorage.removeItem("setShowSecondSelected");
+     localStorage.removeItem("isShowing");
+     localStorage.removeItem("firstSelected");
+     localStorage.removeItem("isShowing");
+     localStorage.removeItem("showFirstWinner");
+     localStorage.removeItem("secondSelected");
+     localStorage.removeItem("isShowing");
+     localStorage.removeItem("showSecondWinner");
+     setShowgrandPage2(false)
+     localStorage.removeItem("setShowSecondGrandPage")
+
+    }
+     
+ 
+   };
+
   return (
     <div className="grandpage">
        <div className="nav-buttons-container">
         <Link to={"/"} >
         <button className="home-button medium-home-button">Home</button>
         </Link>
+        <Link to={"/"}>
+          <button
+            className="home-button medium-home-button"
+            onClick={resetAllStateValues}
+          >
+            Reset
+          </button>
+        </Link>
         </div>
       <div className="grandPrize">
-        <img src="/pics/creatives/grand-winner-up.gif" className="grandprize-image" alt="" />
+        <img src="/requirements/backgrounds/grand-winner-up.gif" className="grandprize-image" alt="" />
       </div>
       <div className="grandprize-down-portion">
-         <img className="grand-down-image" src="/pics/creatives/grand-winner-down.gif" alt="" />
-      <div className="items-container">
-       
-        
-        {
-            announceWinners && (
-                <div className={`transition-element ${isShowing ? 'show' : ''}`} onClick={handleAnnounceWinners}>
-                    <img src="/pics/second-grand-winner-selected.gif" className="announce-prize-image" alt="grand-prize-announcement" />
+         <img className="grand-down-image" src="/requirements/backgrounds/grand-winner-down.gif" alt="" />
 
-                    </div>
-            )
-        }
-      {
+         <div className="first-absolute-container">
+         
+          {firstSelected && (
+            <div className={`transition-element ${isShowing ? "show" : ""}`} onClick={showFirstGrandWinner}>
+              <img
+                src="/requirements/winners/first-grand-winner-selected.gif"
+                className="announce-prize-image"
+                alt="grand-prize-announcement"
+              />
+            </div>
+          )}
+          {
             showFirstWinner && (
-                <div className={`transition-element ${isShowing ? 'show' : ''}`} onClick={handleFirstWinner} >
-                    <img src="/pics/first-grand-winner.gif" className="announce-prize-image" alt="grand-prize-announcement" />
+                <div className={`transition-element ${isShowing ? 'show' : ''}`} >
+                    <img src="/requirements/winners/grand-winner-1.gif" className="announce-prize-image" alt="grand-prize-announcement" />
 
                     </div>
             )
         }
-
-{
+        </div>
+        <div className="second-absolute-container">
+         
+          {secondSelected && (
+            <div className={`transition-element ${isShowing ? "show" : ""}`} onClick={showSecondGrandWinner}>
+              <img
+                src="/requirements/winners/second-grand-winner-selected.gif"
+                className="announce-prize-image"
+                alt="grand-prize-announcement"
+              />
+            </div>
+          )}{
             showSecondWinner && (
                 <div className={`transition-element ${isShowing ? 'show' : ''}`} >
-                    <img src="/pics/second-grand-winner.gif" className="announce-prize-image" alt="grand-prize-announcement" />
+                    <img src="/requirements/winners/grand-winner-2.gif" className="announce-prize-image" alt="grand-prize-announcement" />
 
                     </div>
             )
         }
-
-
-
-
-
-
-
+     
 
       </div>
       </div>

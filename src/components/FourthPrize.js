@@ -43,16 +43,16 @@ function FourthPrize() {
         </Link>
         </div>
       <div className="grandPrize">
-        <img src="/pics/creatives/fourth-winner-up.gif" className="grandprize-image" alt="" />
+        <img src="/requirements/backgrounds/fourth-winner-up.gif" className="grandprize-image" alt="" />
       </div>
       <div className="grandprize-down-portion">
-         <img className="grand-down-image" src="/pics/creatives/fourth-winner-down.gif" alt="" />
+         <img className="grand-down-image" src="/requirements/backgrounds/fourth-winner-down.gif" alt="" />
       <div className="items-container">
         {isCardVisible && (
           <div className="grand-page-card-container">
             <div className="card" onClick={handleCardClick}>
               <div className="card-image-container">
-                <img src="5.gif" className="card-image" alt="" />
+                <img src="/requirements/cards/5.gif" className="card-image" alt="" />
               </div>
             </div>
           </div>

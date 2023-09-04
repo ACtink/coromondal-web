@@ -17,6 +17,7 @@ import { ShowNewGrandPageContext } from "./components/GrandPageContext";
 function App() {
 
    const [showSecondGrandPage , setShowSecondGrandPage] = useState(false)
+   const [showGrandPage2 , setShowgrandPage2] = useState(false)
 
 // const ShowNewGrandPageContext = createContext(false);
 
@@ -24,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-       <ShowNewGrandPageContext.Provider value={[showSecondGrandPage, setShowSecondGrandPage]}>
+       <ShowNewGrandPageContext.Provider value={[showSecondGrandPage, setShowSecondGrandPage ,  showGrandPage2 , setShowgrandPage2]}>
       <Routes>
         <Route path="/">
           <Route path="/" element={<Home />} />

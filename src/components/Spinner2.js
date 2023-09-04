@@ -23,10 +23,15 @@ function Spinner2({
     setTimeout(() => {
       setAnimationClass("");
       setIsSecondSpinnerVisible(false);
+      localStorage.setItem("setShowSecondSelected", "true");
+      localStorage.setItem("isSecondSpinnerVisible", "false");
+      localStorage.setItem("isShowing", "true");
+
       setShowSecondSelected(true);
       setIsShowing(true);
       setShowSecondGrandPage(true);
-    }, 10000);
+      localStorage.setItem("setShowSecondGrandPage" , "true")
+    }, 7000);
 
     // Apply the animation class
     console.log(animationClass);

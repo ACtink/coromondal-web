@@ -12,9 +12,9 @@ const rightArrowStyles = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  right: "16px",
+  right: "7px",
   fontSize: "70px",
-  color: "#f579",
+  color: "#9299",
   zIndex: 1,
   cursor: "pointer",
 };
@@ -23,9 +23,9 @@ const leftArrowStyles = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  left: "16px",
+  left: "7px",
   fontSize: "70px",
-  color: "#f579",
+  color: "#9299",
   zIndex: 1,
   cursor: "pointer",
 };
