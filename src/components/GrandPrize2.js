@@ -130,7 +130,7 @@ function GrandPrize2() {
           {
             showFirstWinner && (
                 <div className={`transition-element ${isShowing ? 'show' : ''}`} >
-                    <img src="/requirements/winners/grand-winner-1.gif" className="announce-prize-image" alt="grand-prize-announcement" />
+                    <img src="/winners/grand-winner-1.gif" className="announce-prize-image" alt="grand-prize-announcement" />
 
                     </div>
             )
@@ -149,7 +149,7 @@ function GrandPrize2() {
           )}{
             showSecondWinner && (
                 <div className={`transition-element ${isShowing ? 'show' : ''}`} >
-                    <img src="/requirements/winners/grand-winner-2.gif" className="announce-prize-image" alt="grand-prize-announcement" />
+                    <img src="/winners/grand-winner-2.gif" className="announce-prize-image" alt="grand-prize-announcement" />
 
                     </div>
             )

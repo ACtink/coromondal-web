@@ -1,13 +1,31 @@
 import Slider from "./Slider";
-const SliderContainer = () => {
-  const slides = [
-    { url: "requirements/winners/first-winner-names-1.gif", title: "beach" },
-    { url: "requirements/winners/first-winner-names-2.gif", title: "boat" },
+const SliderContainer = (props) => {
+  let slides={}
+  const winnersToShow  = props.winnersList
+  if(winnersToShow){
+     slides = [
+      // { url: "requirements/winners/first-winner-names-1.gif", title: "beach" },
+      // { url: "requirements/winners/first-winner-names-2.gif", title: "boat" },
+      winnersToShow
+      // { url: "http://localhost:3000/image-3.jpg", title: "forest" },
+      // { url: "http://localhost:3000/image-4.jpg", title: "city" },
+      // { url: "http://localhost:3000/image-5.jpg", title: "italy" },
+    ];
+  }
+    else{
+       slides = [
+        { url: "requirements/winners/first-winner-names-1.gif", title: "beach" },
+        { url: "requirements/winners/first-winner-names-2.gif", title: "boat" },
+        
+        // { url: "http://localhost:3000/image-3.jpg", title: "forest" },
+        // { url: "http://localhost:3000/image-4.jpg", title: "city" },
+        // { url: "http://localhost:3000/image-5.jpg", title: "italy" },
+      ];
+      
+    }
 
-    // { url: "http://localhost:3000/image-3.jpg", title: "forest" },
-    // { url: "http://localhost:3000/image-4.jpg", title: "city" },
-    // { url: "http://localhost:3000/image-5.jpg", title: "italy" },
-  ];
+  
+ 
   const containerStyles = {
     width: "570px",
     height: "350px",

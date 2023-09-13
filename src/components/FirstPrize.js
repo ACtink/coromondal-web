@@ -26,6 +26,9 @@ function FirstPrize() {
     
   };
 
+
+  const winnersList = { url: "/winners/1st-winner-1.gif", title: "beach" }
+
   const handleAnnounceImage = ()=>{
     
     setShowWinners(true)
@@ -88,7 +91,7 @@ function FirstPrize() {
             )
 
         } */}{
-            showWinners && (<SliderContainer/>)
+            showWinners && (<SliderContainer winnersList={winnersList} />)
         }
 
       </div>

@@ -14,6 +14,9 @@ function SecondPrize() {
   const [isShowing, setIsShowing] = useState(false);
   const [announceWinner , setAnnounceWinner] = useState(false);
 
+  const winnersList = { url: "/winners/2nd-winner-1.gif", title: "beach" }
+
+
 
   const toggleElement = () => {
     setIsShowing(true);
@@ -88,7 +91,7 @@ function SecondPrize() {
             )
 
         } */}   {
-            showWinners && (<SliderContainer/>)
+            showWinners && (<SliderContainer winnersList={winnersList} />)
         }
 
       </div>
