@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Spinner from "./Spinner";
 import SliderContainer from "./SliderContainer";
+import Modal from "./Modal";
 
 function FirstPrize() {
   const [isCardVisible, setIsCardVisible] = useState(true);
@@ -20,6 +21,15 @@ function FirstPrize() {
   };
 
 
+  const [showModal , setShowModal] = useState(false)
+
+  const toggleModal =()=>{
+    setShowModal(!showModal)
+    setAnnounceWinner(!announceWinner)
+  }
+
+
+
   const handleCardClick = () => {
     setIsCardVisible(false);
     setIsSpinnerVisible(true);
@@ -27,13 +37,16 @@ function FirstPrize() {
   };
 
 
-  const winnersList = { url: "/winners/1st-winner-1.gif", title: "beach" }
+  const winnersList = [{ url: "/winners/1st.gif", title: "beach" }]
 
   const handleAnnounceImage = ()=>{
     
     setShowWinners(true)
     setIsShowing(true)
     setAnnounceWinner(false)
+
+    setShowModal(!showModal)
+
    
     
 
@@ -90,12 +103,18 @@ function FirstPrize() {
                 </div>
             )
 
-        } */}{
+        } */}
+        {/* {
             showWinners && (<SliderContainer winnersList={winnersList} />)
-        }
+        } */}
 
       </div>
       </div>
+      {showWinners && (
+          
+          
+          <Modal showModal={showModal} setShowModal={setShowModal} toggleModal={toggleModal} winnersList={winnersList} revealPrize={revealPrize} setRevealPrize={setRevealPrize} />
+        )}
     </div>
   );
 }

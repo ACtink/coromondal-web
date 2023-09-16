@@ -12,9 +12,9 @@ const rightArrowStyles = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  right: "3px",
+  right: "16px",
   fontSize: "70px",
-  color: "#9299",
+  color: "#f579",
   zIndex: 1,
   cursor: "pointer",
 };
@@ -23,9 +23,9 @@ const leftArrowStyles = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  left: "3px",
+  left: "16px",
   fontSize: "70px",
-  color: "#9299",
+  color: "#f579",
   zIndex: 1,
   cursor: "pointer",
 };
@@ -64,7 +64,7 @@ const Slider = ({ slides }) => {
     setCurrentIndex(slideIndex);
   };
   const slideStylesWidthBackground = {
-    ...slideStyles,
+   
     backgroundImage: `url("${slides[currentIndex].url}")`,
   };
 
@@ -72,7 +72,7 @@ const Slider = ({ slides }) => {
   console.log(`${slides[currentIndex].url}`)
 
   return (
-    <div style={sliderStyles}>
+    <div className="slides-div">
       <div>
         <div onClick={goToPrevious} style={leftArrowStyles}>
           ❰
@@ -81,7 +81,7 @@ const Slider = ({ slides }) => {
           ❱
         </div>
       </div>
-      <div style={slideStylesWidthBackground}></div>
+      <div className="slides" style={slideStylesWidthBackground}></div>
       <div style={dotsContainerStyles}>
         {slides.map((slide, slideIndex) => (
           <div

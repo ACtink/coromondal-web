@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Spinner from "./Spinner";
 import SliderContainer from "./SliderContainer";
+import Modal from "./Modal";
 
 function ThirdPrize() {
   const [isCardVisible, setIsCardVisible] = useState(true);
@@ -16,6 +17,15 @@ function ThirdPrize() {
     setIsShowing(true);
   };
 
+
+  const [showModal , setShowModal] = useState(false)
+
+  const toggleModal =()=>{
+    setShowModal(!showModal)
+    setAnnounceWinner(!announceWinner)
+  }
+
+
   const handleCardClick = () => {
     setIsCardVisible(false);
     setIsSpinnerVisible(true);
@@ -26,7 +36,11 @@ function ThirdPrize() {
     setShowWinners(true);
     setIsShowing(true);
     setAnnounceWinner(false);
+    setShowModal(!showModal)
   };
+
+  
+  const winnersList = [{ url: "/winners/1st.gif", title: "beach" }]
 
   return (
     <div className="grandpage">
@@ -92,9 +106,15 @@ function ThirdPrize() {
             )
 
         } */}
-          {showWinners && <SliderContainer />}
+          {/* {showWinners && <SliderContainer />} */}
         </div>
       </div>
+      {showWinners && (
+          
+          
+          <Modal showModal={showModal} setShowModal={setShowModal} toggleModal={toggleModal} winnersList={winnersList} revealPrize={revealPrize} setRevealPrize={setRevealPrize} />
+        )}
+      
     </div>
   );
 }

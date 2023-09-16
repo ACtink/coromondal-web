@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Spinner from "./Spinner";
 import SliderContainer from "./SliderContainer";
+import Modal from "./Modal";
 
 function FifthPrize() {
   const [isCardVisible, setIsCardVisible] = useState(true);
@@ -19,6 +20,14 @@ function FifthPrize() {
     setIsShowing(true);
   };
 
+  const [showModal , setShowModal] = useState(false)
+
+  const toggleModal =()=>{
+    setShowModal(!showModal)
+    setAnnounceWinner(!announceWinner)
+  }
+
+
 
   const handleCardClick = () => {
     setIsCardVisible(false);
@@ -30,10 +39,15 @@ function FifthPrize() {
     setShowWinners(true)
     setIsShowing(true)
     setAnnounceWinner(false)
+    setShowModal(!showModal)
+
    
     
 
   }
+
+  const winnersList = [{ url: "/winners/1st.gif", title: "beach" }]
+
 
   return (
     
@@ -89,12 +103,17 @@ function FifthPrize() {
             )
 
         } */}
-        {
+        {/* {
             showWinners && (<SliderContainer/>)
-        }
+        } */}
 
       </div>
       </div>
+      {showWinners && (
+          
+          
+          <Modal showModal={showModal} setShowModal={setShowModal} toggleModal={toggleModal} winnersList={winnersList} revealPrize={revealPrize} setRevealPrize={setRevealPrize} />
+        )}
     </div>
   );
 }

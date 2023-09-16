@@ -2,11 +2,11 @@ import Slider from "./Slider";
 const SliderContainer = (props) => {
   let slides={}
   const winnersToShow  = props.winnersList
-  if(winnersToShow){
+  if(winnersToShow.length!==0){
      slides = [
       // { url: "requirements/winners/first-winner-names-1.gif", title: "beach" },
       // { url: "requirements/winners/first-winner-names-2.gif", title: "boat" },
-      winnersToShow
+      ...winnersToShow
       // { url: "http://localhost:3000/image-3.jpg", title: "forest" },
       // { url: "http://localhost:3000/image-4.jpg", title: "city" },
       // { url: "http://localhost:3000/image-5.jpg", title: "italy" },
@@ -26,15 +26,16 @@ const SliderContainer = (props) => {
 
   
  
-  const containerStyles = {
-    width: "570px",
-    height: "350px",
-    margin: "63px auto"
-  };
+  // const containerStyles = {
+  //   width: "570px",
+  //   height: "350px",
+  //   margin: "63px auto"
+  // };
+
   return (
     <div>
     
-      <div style={containerStyles}>
+      <div className="slider-container" >
         <Slider slides={slides} />
       </div>
     </div>
