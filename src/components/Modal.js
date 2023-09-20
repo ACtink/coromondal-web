@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SliderContainer from "./SliderContainer";
 
 function Modal({ showModal, setShowModal, toggleModal, winnersList }) {
+
+
+ 
+
+
   return (
     <>
       {showModal && (

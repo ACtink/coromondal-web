@@ -1,6 +1,6 @@
 
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Spinner from "./Spinner";
 import SliderContainer from "./SliderContainer";
@@ -37,7 +37,7 @@ function FirstPrize() {
   };
 
 
-  const winnersList = [{ url: "/winners/1st.gif", title: "beach" }]
+  const winnersList = [{ url: "/coromandel_winner_posters/first_prize_1.gif", title: "beach" }]
 
   const handleAnnounceImage = ()=>{
     
@@ -51,6 +51,8 @@ function FirstPrize() {
     
 
   }
+
+  
 
   return (
     <div className="grandpage"> 

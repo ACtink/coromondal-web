@@ -94,8 +94,8 @@ function GrandPrize2() {
   };
 
 
-  const firstWinnersList = [{ url: "/winners/1st.gif", title: "first" }]
-  const secondWinnersList = [{ url: "/winners/2nd.gif", title: "second" }]
+  const firstWinnersList = [{ url: "/coromandel_winner_posters/grand_prize_1.gif", title: "first" }]
+  const secondWinnersList = [{ url: "/coromandel_winner_posters/grand_prize_2.gif", title: "second" }]
 
   
 

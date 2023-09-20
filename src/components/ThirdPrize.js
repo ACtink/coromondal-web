@@ -17,14 +17,12 @@ function ThirdPrize() {
     setIsShowing(true);
   };
 
+  const [showModal, setShowModal] = useState(false);
 
-  const [showModal , setShowModal] = useState(false)
-
-  const toggleModal =()=>{
-    setShowModal(!showModal)
-    setAnnounceWinner(!announceWinner)
-  }
-
+  const toggleModal = () => {
+    setShowModal(!showModal);
+    setAnnounceWinner(!announceWinner);
+  };
 
   const handleCardClick = () => {
     setIsCardVisible(false);
@@ -36,11 +34,13 @@ function ThirdPrize() {
     setShowWinners(true);
     setIsShowing(true);
     setAnnounceWinner(false);
-    setShowModal(!showModal)
+    setShowModal(!showModal);
   };
 
-  
-  const winnersList = [{ url: "/winners/1st.gif", title: "beach" }]
+  const winnersList = [
+    { url: "/coromandel_winner_posters/other_prize_1.gif", title: "beach" },
+    { url: "/coromandel_winner_posters/other_prize_2.gif", title: "beachkrrr" },
+  ];
 
   return (
     <div className="grandpage">
@@ -110,11 +110,15 @@ function ThirdPrize() {
         </div>
       </div>
       {showWinners && (
-          
-          
-          <Modal showModal={showModal} setShowModal={setShowModal} toggleModal={toggleModal} winnersList={winnersList} revealPrize={revealPrize} setRevealPrize={setRevealPrize} />
-        )}
-      
+        <Modal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          toggleModal={toggleModal}
+          winnersList={winnersList}
+          revealPrize={revealPrize}
+          setRevealPrize={setRevealPrize}
+        />
+      )}
     </div>
   );
 }

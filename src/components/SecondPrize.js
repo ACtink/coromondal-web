@@ -15,7 +15,7 @@ function SecondPrize() {
   const [isShowing, setIsShowing] = useState(false);
   const [announceWinner , setAnnounceWinner] = useState(false);
 
-  const winnersList = [{ url: "/winners/2nd.gif", title: "beach" }]
+  const winnersList = [{ url: "/coromandel_winner_posters/second_prize_1.gif", title: "beach" }]
 
 
 
