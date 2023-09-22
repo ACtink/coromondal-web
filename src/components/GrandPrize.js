@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Spinner from "./Spinner";
 import Spinner2 from "./Spinner2";
 import { ShowNewGrandPageContext } from "./GrandPageContext";
+import { motion } from "framer-motion";
+
 
 function GrandPrize() {
   const [isCardVisible, setIsCardVisible] = useState(
@@ -96,7 +98,8 @@ function GrandPrize() {
   };
 
   return (
-    <div className="grandpage">
+    <div className="grandpage" 
+    >
       <div className="nav-buttons-container">
         <Link to={"/"}>
           <button className="home-button medium-home-button">Home</button>

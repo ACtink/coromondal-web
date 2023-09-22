@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Spinner from "./Spinner";
 import SliderContainer from "./SliderContainer";
 import Modal from "./Modal";
+import { motion } from "framer-motion";
 
 function FifthPrize() {
   const [isCardVisible, setIsCardVisible] = useState(true);
@@ -38,12 +39,26 @@ function FifthPrize() {
   };
 
   const winnersList = [
-    { url: "/coromandel_winner_posters/other_prize_1.gif", title: "beach" },
-    { url: "/coromandel_winner_posters/other_prize_2.gif", title: "beach" },
+    { url: "/coromandel_winner_posters/FIFTH_PRIZE_1.gif", title: "beach" },
+    { url: "/coromandel_winner_posters/FIFTH_PRIZE_2.gif", title: "beach" },
+    { url: "/coromandel_winner_posters/FIFTH_PRIZE_3.gif", title: "beach" },
+    { url: "/coromandel_winner_posters/FIFTH_PRIZE_4.gif", title: "beach" },
+    { url: "/coromandel_winner_posters/FIFTH_PRIZE_5.gif", title: "beach" },
+    { url: "/coromandel_winner_posters/FIFTH_PRIZE_6.gif", title: "beach" },
+    { url: "/coromandel_winner_posters/FIFTH_PRIZE_7.gif", title: "beach" },
+    { url: "/coromandel_winner_posters/FIFTH_PRIZE_8.gif", title: "beach" },
+    { url: "/coromandel_winner_posters/FIFTH_PRIZE_9.gif", title: "beach" },
+    { url: "/coromandel_winner_posters/FIFTH_PRIZE_10.gif", title: "beach" },
+
+
+    
   ];
 
   return (
-    <div className="wholepage">
+    <div
+      className="wholepage"
+      
+    >
       <div className="nav-buttons-container">
         <Link to={"/"}>
           <button className="home-button medium-home-button">Home</button>

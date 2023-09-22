@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Spinner from "./Spinner";
 import SliderContainer from "./SliderContainer";
 import Modal from "./Modal";
+import { motion } from "framer-motion";
 
 function ThirdPrize() {
   const [isCardVisible, setIsCardVisible] = useState(true);
@@ -43,7 +44,10 @@ function ThirdPrize() {
   ];
 
   return (
-    <div className="grandpage">
+    <div
+      className="grandpage"
+      
+    >
       <div className="nav-buttons-container">
         <Link to={"/"}>
           <button className="home-button medium-home-button">Home</button>

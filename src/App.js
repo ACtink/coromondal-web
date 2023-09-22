@@ -14,6 +14,7 @@ import GrandPrize2 from "./components/GrandPrize2";
 import { createContext, useContext, useState } from 'react';
 import { ShowNewGrandPageContext } from "./components/GrandPageContext";
 
+
 function App() {
 
    const [showSecondGrandPage , setShowSecondGrandPage] = useState(false)
@@ -26,7 +27,7 @@ function App() {
   return (
     <div className="App">
        <ShowNewGrandPageContext.Provider value={[showSecondGrandPage, setShowSecondGrandPage ,  showGrandPage2 , setShowgrandPage2]}>
-      <Routes>
+       <Routes>
         <Route path="/">
           <Route path="/" element={<Home />} />
           <Route path="/grandprize" element={<GrandPrize />} />

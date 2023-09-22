@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Spinner from "./Spinner";
 import SliderContainer from "./SliderContainer";
 import Modal from "./Modal";
+import { motion } from "framer-motion";
 
 function FourthPrize() {
   const [isCardVisible, setIsCardVisible] = useState(true);
@@ -38,12 +39,17 @@ function FourthPrize() {
   };
 
   const winnersList = [
-    { url: "/coromandel_winner_posters/other_prize_1.gif", title: "beach" },
-    { url: "/coromandel_winner_posters/other_prize_2.gif", title: "beach" },
+    { url: "/coromandel_winner_posters/fourth_prize_1.gif", title: "beach" },
+    { url: "/coromandel_winner_posters/fourth_prize_2.gif", title: "beach" },
+    { url: "/coromandel_winner_posters/fourth_prize_3.gif", title: "beach" },
+    
   ];
 
   return (
-    <div className="grandpage">
+    <div
+      className="grandpage"
+      
+    >
       <div className="nav-buttons-container">
         <Link to={"/"}>
           <button className="home-button medium-home-button">Home</button>

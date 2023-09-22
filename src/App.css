@@ -84,7 +84,7 @@
   max-height: 50vh;
   max-width: 100%;
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   gap: 5px;
   justify-content: space-evenly;
   overflow: hidden;

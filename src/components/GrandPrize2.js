@@ -4,6 +4,7 @@ import Spinner from "./Spinner";
 import Spinner2 from "./Spinner2";
 import { ShowNewGrandPageContext } from "./GrandPageContext";
 import Modal from "./Modal";
+import { motion } from "framer-motion";
 
 function GrandPrize2() {
   const [showFirstWinner, setShowFirstWinner] = useState(false);
@@ -27,12 +28,11 @@ function GrandPrize2() {
 
   const toggleModal = () => {
     setShowModal(!showModal);
-    setShowFirstWinner(false)
-    setShowSecondWinner(false)
+    setShowFirstWinner(false);
+    setShowSecondWinner(false);
 
     setFirstSelected(true);
     setSecondSelected(true);
-
   };
 
   const handleFirstWinner = () => {
@@ -53,21 +53,20 @@ function GrandPrize2() {
 
   const showFirstGrandWinner = () => {
     setFirstSelected(false);
-    setSecondSelected(false)
+    setSecondSelected(false);
     setShowFirstWinner(true);
     setIsShowing(true);
     // setShowgrandPage2(true)
-    setShowModal(!showModal)
+    setShowModal(!showModal);
   };
 
   const showSecondGrandWinner = () => {
     setSecondSelected(false);
-    setFirstSelected(false)
+    setFirstSelected(false);
     setShowSecondWinner(true);
     setIsShowing(true);
     // setShowgrandPage2(true)
-    setShowModal(!showModal)
-
+    setShowModal(!showModal);
   };
 
   const resetAllStateValues = () => {
@@ -93,16 +92,18 @@ function GrandPrize2() {
     }
   };
 
-
-  const firstWinnersList = [{ url: "/coromandel_winner_posters/grand_prize_1.gif", title: "first" }]
-  const secondWinnersList = [{ url: "/coromandel_winner_posters/grand_prize_2.gif", title: "second" }]
-
-  
-
-
+  const firstWinnersList = [
+    { url: "/coromandel_winner_posters/grand_prize_1.gif", title: "first" },
+  ];
+  const secondWinnersList = [
+    { url: "/coromandel_winner_posters/grand_prize_2.gif", title: "second" },
+  ];
 
   return (
-    <div className="grandpage">
+    <div
+      className="grandpage"
+      
+    >
       <div className="nav-buttons-container">
         <Link to={"/"}>
           <button className="home-button medium-home-button">Home</button>
@@ -183,7 +184,6 @@ function GrandPrize2() {
             setShowModal={setShowModal}
             toggleModal={toggleModal}
             winnersList={firstWinnersList}
-           
           />
         )}
       </>
@@ -194,8 +194,6 @@ function GrandPrize2() {
             setShowModal={setShowModal}
             toggleModal={toggleModal}
             winnersList={secondWinnersList}
-            
-          
           />
         )}
       </>
