@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../spinner.css";
+import { motion } from "framer-motion";
 
 function Spinner({isSpinnerVisible,setIsSpinnerVisible, setAnnounceWinner, setShowFirstSelected , setIsShowing}) {
 
@@ -46,7 +47,9 @@ setTimeout(()=>{
     <>
       {/* <div className="spinner-container" onClick={handleSpinnerClick}> */}
     
-        <img
+        <motion.img
+        initial={{x:"-100vw"}}
+        animate={{x:"0"}}
           src="spinphoto.png"
           className={`spinner ${animationClass}`}
           alt="spin"

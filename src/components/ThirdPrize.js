@@ -39,15 +39,12 @@ function ThirdPrize() {
   };
 
   const winnersList = [
-    { url: "/coromandel_winner_posters/other_prize_1.gif", title: "beach" },
-    { url: "/coromandel_winner_posters/other_prize_2.gif", title: "beachkrrr" },
+    { url: "/coromandel_winner_posters/third_prize_1.gif", title: "beach" },
+    { url: "/coromandel_winner_posters/third_prize_2.gif", title: "beachkrrr" },
   ];
 
   return (
-    <div
-      className="grandpage"
-      
-    >
+    <div className="grandpage">
       <div className="nav-buttons-container">
         <Link to={"/"}>
           <button className="home-button medium-home-button">Home</button>
@@ -68,13 +65,18 @@ function ThirdPrize() {
         />
         <div className="items-container">
           {isCardVisible && (
-            <div className="grand-page-card-container">
+            <motion.div
+              initial={{ y: "-100vh" }}
+              animate={{ y: "0" }}
+              transition={{ delay: "0.5" }}
+              className="grand-page-card-container"
+            >
               <div className="card" onClick={handleCardClick}>
                 <div className="card-image-container">
                   <img src="4.gif" className="card-image" alt="" />
                 </div>
               </div>
-            </div>
+            </motion.div>
           )}
           {isSpinnerVisible && (
             <div>

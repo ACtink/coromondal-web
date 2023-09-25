@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import "../spinner.css";
 import { ShowNewGrandPageContext } from "./GrandPageContext";
+import { motion } from "framer-motion";
+
 
 function Spinner2({
   isSecondSpinnerVisible,
@@ -39,7 +41,9 @@ function Spinner2({
   return (
     <>
       <div className="spinner-container" onClick={handleSpinnerClick}>
-        <img
+        <motion.img
+        initial={{x:"100vw"}}
+        animate={{x:"0"}}
           src="spinphoto.png"
           className={`spinner ${animationClass}`}
           alt="spin"

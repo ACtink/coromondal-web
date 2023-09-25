@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SliderContainer from "./SliderContainer";
+import { AnimatePresence, motion } from "framer-motion";
+
 
 function Modal({ showModal, setShowModal, toggleModal, winnersList }) {
 
@@ -9,8 +11,13 @@ function Modal({ showModal, setShowModal, toggleModal, winnersList }) {
 
   return (
     <>
+    <AnimatePresence>
       {showModal && (
-        <div className={`modal ${showModal ? "open" : "" }`}>
+        <motion.div
+        initial={{y:"-100vh"}}
+        animate={{y:"0"}}
+        exit={{y:"-200vh"}}
+         className={`modal ${showModal ? "open" : "" }`}>
           {/* <div className="overlay"></div> */}
 
           <div className="container-modal">
@@ -18,12 +25,18 @@ function Modal({ showModal, setShowModal, toggleModal, winnersList }) {
           {winnersList[0].title==="second" &&  <SliderContainer winnersList={winnersList} />} */}
             <SliderContainer winnersList={winnersList} />
 
-            <button className="modal-close-button" onClick={toggleModal}>
+            <motion.button
+            whileHover={{scale:"1.1"}}
+            whileTap={{scale:"0.8"}}
+        
+            
+            className="modal-close-button" onClick={toggleModal}>
               Close
-            </button>
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
       )}
+      </AnimatePresence>
     </>
   );
 }

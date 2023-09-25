@@ -49,16 +49,10 @@ function FifthPrize() {
     { url: "/coromandel_winner_posters/FIFTH_PRIZE_8.gif", title: "beach" },
     { url: "/coromandel_winner_posters/FIFTH_PRIZE_9.gif", title: "beach" },
     { url: "/coromandel_winner_posters/FIFTH_PRIZE_10.gif", title: "beach" },
-
-
-    
   ];
 
   return (
-    <div
-      className="wholepage"
-      
-    >
+    <div className="wholepage">
       <div className="nav-buttons-container">
         <Link to={"/"}>
           <button className="home-button medium-home-button">Home</button>
@@ -79,13 +73,18 @@ function FifthPrize() {
         />
         <div className="items-container">
           {isCardVisible && (
-            <div className="grand-page-card-container">
+            <motion.div
+              initial={{ y: "-100vh" }}
+              animate={{ y: "0" }}
+              transition={{ delay: "0.5" }}
+              className="grand-page-card-container"
+            >
               <div className="card" onClick={handleCardClick}>
                 <div className="card-image-container">
                   <img src="6.gif" className="card-image" alt="" />
                 </div>
               </div>
-            </div>
+            </motion.div>
           )}
           {isSpinnerVisible && (
             <div>

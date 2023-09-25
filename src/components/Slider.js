@@ -74,12 +74,12 @@ const Slider = ({ slides }) => {
   return (
     <div className="slides-div">
       <div>
-        <div onClick={goToPrevious} style={leftArrowStyles}>
+       {slides.length > 1  && (<div onClick={goToPrevious} style={leftArrowStyles}>
           ❰
-        </div>
-        <div onClick={goToNext} style={rightArrowStyles}>
+        </div>)}
+        {slides.length > 1 && (<div onClick={goToNext} style={rightArrowStyles}>
           ❱
-        </div>
+        </div>)}
       </div>
       <div className="slides" style={slideStylesWidthBackground}></div>
       <div style={dotsContainerStyles}>

@@ -15,7 +15,7 @@ function SecondPrize() {
   const [announceWinner, setAnnounceWinner] = useState(false);
 
   const winnersList = [
-    { url: "/coromandel_winner_posters/second_prize_1.gif", title: "beach" },
+    { url: "/coromandel_winner_posters/second_prize.gif", title: "beach" },
   ];
 
   const toggleElement = () => {
@@ -43,10 +43,7 @@ function SecondPrize() {
   };
 
   return (
-    <div
-      className="grandpage"
-     
-    >
+    <div className="grandpage">
       <div className="nav-buttons-container">
         <Link to={"/"}>
           <button className="home-button medium-home-button">Home</button>
@@ -67,13 +64,18 @@ function SecondPrize() {
         />
         <div className="items-container">
           {isCardVisible && (
-            <div className="grand-page-card-container">
+            <motion.div
+              initial={{ y: "-100vh" }}
+              animate={{ y: "0" }}
+              transition={{ delay: "0.5" }}
+              className="grand-page-card-container"
+            >
               <div className="card" onClick={handleCardClick}>
                 <div className="card-image-container">
                   <img src="3.gif" className="card-image" alt="" />
                 </div>
               </div>
-            </div>
+            </motion.div>
           )}
           {isSpinnerVisible && (
             <div>
