@@ -130,7 +130,7 @@ function GrandPrize() {
               <motion.div
                 initial={{ y: "-100vh" }}
                 animate={{ y: "0" }}
-                transition={{ delay: "0.5" }}
+                transition={{ delay: "0.6" }}
                 className="grand-page-card-container"
               >
                 <div className="card" onClick={handleCardClick}>

@@ -50,6 +50,7 @@ setTimeout(()=>{
         <motion.img
         initial={{x:"-100vw"}}
         animate={{x:"0"}}
+        transition={{delay:"0.4"}}
           src="spinphoto.png"
           className={`spinner ${animationClass}`}
           alt="spin"
